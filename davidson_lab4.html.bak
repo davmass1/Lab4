@@ -1,0 +1,64 @@
+<!-- Mason Davidson 4/25/2022 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Lab 3">
+<meta name="author" content="Mason Davidson">
+<meta name="keywords" content="HTML, CSS, Javascript">
+<meta name="viewport" content="width=device-width, initial=scale1.0">
+<title>Responsive Grid with Javascript</title>
+<style>
+/* This is my CSS Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 220px;
+  grid-gap: 10px;
+  background-color: cyan;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: orange;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+body {
+  background-color: white;
+}
+@media only screen and (max-width: 1024px){
+.grid-container > div {
+  background-color: gray;
+  text-align: left;
+  padding: 10px 0;
+  font-size: 25px;
+}
+  @media only screen and (max-width: 768px){
+.grid-container > div {
+  background-color: red;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 40px;
+}
+img { 
+    max-width: 100%;
+    height: auto;
+    }}}
+</style>
+</head>
+<body>
+<input type="button" value="Click here to make the webpage purple!" onclick="chBackcolor('purple');">
+<script>
+function chBackcolor(color) {
+   document.body.style.background = color;
+}
+</script>
+<h1>Reponsive Grid with Javascript</h1>
+   <div class="grid-container">
+    <div class="image1"><img src="images/200.png" alt="200 placeholder"></div>
+    <div class="image2"><img src="images/200.png" alt="200 placeholder"></div>
+    <div class="image3"><img src="images/200.png" alt="200 placeholder"></div>   
+</div>
+</body>
+</html>
